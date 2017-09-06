@@ -1,25 +1,22 @@
 #include "node.h"
 
-string head;
-vector<string> node_content;
-
-string* node::get_header() {
-    return &head;
+std::string* node::get_header() {
+    return &m_head;
 }
 
-long node::set_header(string header) {
-    head = std::move(header);
+long node::set_header(std::string header) {
+    m_head = std::move(header);
 }
 
-vector<string>* node::get_content() {
-    return &node_content;
+std::vector<std::string>* node::get_content() {
+    return &m_node_content;
 }
 
-long node::set_content(vector<string> content) {
-    node_content = std::move(content);
+long node::set_content(std::vector<std::string> content) {
+    m_node_content = std::move(content);
 }
 
 node::node() {
-    head = "//";
-    node_content = vector<string>();
+    m_head = "//";
+    m_node_content = std::vector<std::string>();
 }

@@ -7,18 +7,21 @@
 #include <list>
 #include "node.h"
 
-using namespace std;
-
 class gtkread {
 
 public:
+    gtkread(char **filename);
+    ~gtkread();
+
     long file_load();
-    explicit gtkread(char **filename);
     unsigned long size();
     long parse_nodes();
-    vector<node> get_nodes();
+    std::vector<node> get_nodes();
 
-    ~gtkread();
+private:
+    char **m_filename;
+    std::vector<std::string> m_file_contents;
+    std::vector<node> m_nodes;
 };
 
 #endif //GTK2COD3_GTKREAD_H

@@ -4,15 +4,17 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 class node {
 public:
     node();
-    string * get_header();
-    long set_header(string header);
-    vector<string> *get_content();
-    long set_content(vector<string> content);
+    std::string * get_header();
+    long set_header(std::string header);
+    std::vector<std::string> *get_content();
+    long set_content(std::vector<std::string> content);
+
+private:
+    std::string m_head;
+    std::vector<std::string> m_node_content;
 };
 
 
