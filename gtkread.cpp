@@ -58,6 +58,6 @@ void gtkread::parse_nodes() {
     }
 }
 
-std::vector<node> gtkread::get_nodes() {
+std::vector<node>& gtkread::get_nodes() {
     return m_nodes;
 }

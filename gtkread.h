@@ -16,7 +16,7 @@ public:
     void file_load();
     size_t size();
     void parse_nodes();
-    std::vector<node> get_nodes();
+    std::vector<node>& get_nodes();
 
 private:
     std::string m_filename;
