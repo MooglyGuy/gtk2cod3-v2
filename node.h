@@ -6,7 +6,7 @@
 
 class node {
 public:
-    node();
+    node(std::vector<std::string> &source, size_t header_index, size_t source_start=0, size_t source_end=~0);
     std::string * get_header();
     void set_header(std::string header);
     std::vector<std::string> *get_content();

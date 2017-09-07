@@ -18,10 +18,8 @@ int main(int argc, char *argv[]) {
     std::cout << "Nodes: " << read.get_nodes().size() << std::endl;
 
 	clock_t print_start = clock();
-	node node;
     for (size_t i = 0; i <read.get_nodes().size(); i++) {
-        node = read.get_nodes()[i];
-        std::string header = *node.get_header();
+        std::string header = *read.get_nodes()[i].get_header();
         std::cout << header << std::endl;
     }
 
