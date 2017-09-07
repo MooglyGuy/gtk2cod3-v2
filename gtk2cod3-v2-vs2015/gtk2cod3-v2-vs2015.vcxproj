@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="..\gtkread.h" />
     <ClInclude Include="..\node.h" />
+    <ClInclude Include="..\stringutil.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\gtk2cod3.cpp" />
