@@ -10,16 +10,16 @@
 class gtkread {
 
 public:
-    gtkread(char **filename);
+    gtkread(char *filename);
     ~gtkread();
 
-    long file_load();
-    unsigned long size();
-    long parse_nodes();
+    void file_load();
+    size_t size();
+    void parse_nodes();
     std::vector<node> get_nodes();
 
 private:
-    char **m_filename;
+    std::string m_filename;
     std::vector<std::string> m_file_contents;
     std::vector<node> m_nodes;
 };

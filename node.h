@@ -8,9 +8,9 @@ class node {
 public:
     node();
     std::string * get_header();
-    long set_header(std::string header);
+    void set_header(std::string header);
     std::vector<std::string> *get_content();
-    long set_content(std::vector<std::string> content);
+    void set_content(std::vector<std::string> content);
 
 private:
     std::string m_head;
